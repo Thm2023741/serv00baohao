@@ -13,12 +13,12 @@ jobs:
 
     steps:
       - name: Checkout 仓库代码
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: 设置 Python 环境
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.x'  # 设置你希望使用的 Python 版本，建议使用稳定版本
+          python-version: '3.12.5'  # 设置你希望使用的 Python 版本，建议使用稳定版本
 
       - name: Create accounts.json from environment variable
         run: echo "$ACCOUNTS_JSON" > accounts.json
